@@ -24,3 +24,18 @@ export const userLogout = () => {
     credentials: 'include',
   });
 };
+
+export const userSignup = (
+  email: string,
+  username: string,
+  password: string
+) => {
+  return fetch(`${API_URL}/auth/signup`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+    body: JSON.stringify({ email, username, password }),
+  });
+};
