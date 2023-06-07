@@ -6,3 +6,14 @@ export const isAuthenticated = () => {
     credentials: 'include',
   });
 };
+
+export const userLogin = (username: string, password: string) => {
+  return fetch(`${API_URL}/auth/login`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+    body: JSON.stringify({ username, password }),
+  });
+};
