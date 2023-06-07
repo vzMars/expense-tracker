@@ -17,3 +17,10 @@ export const userLogin = (username: string, password: string) => {
     body: JSON.stringify({ username, password }),
   });
 };
+
+export const userLogout = () => {
+  return fetch(`${API_URL}/auth/logout`, {
+    method: 'GET',
+    credentials: 'include',
+  });
+};
