@@ -24,12 +24,7 @@ body,
 }
 
 body {
-  background-color: #141723;
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
+  background-color: #fff;
 }
 
 .loader {
