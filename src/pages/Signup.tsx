@@ -15,9 +15,9 @@ const Signup = () => {
   };
 
   return (
-    <main className='lg:max-w-xl lg:flex-1 lg:p-24'>
+    <main className='max-w-7xl lg:mx-auto lg:flex-1 lg:p-24'>
       <form
-        className='flex flex-col p-4 lg:rounded-md lg:border-2 lg:border-main-border lg:py-12'
+        className='flex flex-col p-4 lg:w-96 lg:rounded-md lg:border-2 lg:border-main-border lg:py-12'
         onSubmit={handleSubmit}
       >
         <h1 className='mb-4 font-lexbold text-4xl lg:mb-6'>Sign Up</h1>

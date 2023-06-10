@@ -27,10 +27,15 @@ body {
   background-color: #fff;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
 .loader {
   width: 100px;
   height: 100px;
-  border: 10px solid #262a3f;
+  border: 10px solid #32d583;
   border-bottom-color: transparent;
   border-radius: 50%;
   display: inline-block;
