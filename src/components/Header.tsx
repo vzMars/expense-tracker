@@ -11,8 +11,6 @@ const Header = () => {
   const { user } = useAuthContext();
   const { logout } = useLogout();
 
-  const currentYear = new Date().getFullYear();
-
   const onToggle = () => {
     setOpen((status) => {
       if (status) {
@@ -26,22 +24,20 @@ const Header = () => {
   };
 
   return (
-    <header className='flex border-b-2 border-main-border lg:w-80 lg:flex-col lg:border-b-0 lg:border-r-2'>
-      <section className='flex w-full items-center justify-between gap-2 p-4 font-lexreg text-3xl text-main-green lg:justify-normal lg:text-5xl'>
-        <FaUserCircle />
-        <p className='text-2xl font-semibold text-black'>
-          {user ? user.username : 'Guest'}
-        </p>
-        <div className='ml-auto lg:hidden'>
+    <header className='w-full border-b-2 border-main-border'>
+      <section className='mx-auto flex max-w-7xl items-center justify-between p-4'>
+        <div className='flex items-center gap-2 font-lexreg text-3xl text-main-green lg:text-5xl'>
+          <FaUserCircle />
+          <p className='text-2xl font-semibold text-black'>
+            {user ? user.username : 'Guest'}
+          </p>
+        </div>
+        <div className='lg:hidden'>
           <Hamburger toggled={open} toggle={onToggle} size={32} />
         </div>
+        <Nav user={user} logout={logout} />
       </section>
-      <Nav user={user} logout={logout} />
       <MobileNav user={user} open={open} setOpen={onToggle} logout={logout} />
-      <div className='mt-auto hidden p-4 font-lexbold text-lg lg:block'>
-        &copy; {currentYear}{' '}
-        <a href='https://github.com/vzMars'>Marcos Gonzalez</a>
-      </div>
     </header>
   );
 };

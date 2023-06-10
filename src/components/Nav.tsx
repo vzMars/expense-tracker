@@ -8,7 +8,7 @@ type PropsType = {
 
 const Nav = ({ user, logout }: PropsType) => {
   return (
-    <nav className='hidden space-y-2 p-4 font-lexbold text-lg lg:flex lg:flex-col'>
+    <nav className='hidden p-4 font-lexbold text-lg lg:flex lg:items-center'>
       {user ? (
         <>
           <Link
@@ -22,6 +22,12 @@ const Nav = ({ user, logout }: PropsType) => {
             className='rounded-md px-2.5 py-2 hover:bg-main-greenHover hover:text-main-green'
           >
             Transactions
+          </Link>
+          <Link
+            to='/add'
+            className='rounded-md px-2.5 py-2 hover:bg-main-greenHover hover:text-main-green'
+          >
+            Add
           </Link>
           <button
             onClick={() => logout()}

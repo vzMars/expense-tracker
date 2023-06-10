@@ -32,6 +32,12 @@ const MobileNav = ({ user, open, setOpen, logout }: PropsType) => {
           >
             Transactions
           </Link>
+          <Link
+            to='/add'
+            className='rounded-md px-2.5 py-2 hover:bg-white hover:text-main-green'
+          >
+            Add
+          </Link>
           <button
             onClick={() => logout()}
             className='rounded-md px-2.5 py-2 text-left hover:bg-white hover:text-main-green'
