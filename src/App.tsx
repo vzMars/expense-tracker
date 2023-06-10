@@ -5,7 +5,9 @@ import RequireAuth from './components/RequireAuth';
 import RequireGuest from './components/RequireGuest';
 
 // Pages
-import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
+import Transactions from './pages/Transactions';
+import AddTransaction from './pages/AddTransaction';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import NotFound from './pages/NotFound';
@@ -24,7 +26,9 @@ function App() {
           </Route>
 
           <Route element={<RequireAuth />}>
-            <Route index element={<Home />} />
+            <Route index element={<Dashboard />} />
+            <Route path='transactions' element={<Transactions />} />
+            <Route path='add' element={<AddTransaction />} />
           </Route>
 
           <Route path='404' element={<NotFound />} />
