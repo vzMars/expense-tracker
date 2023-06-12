@@ -14,7 +14,7 @@ const TransactionSection = ({
   balance,
   transactions,
 }: PropsType) => {
-  const recentTransactions = transactions.slice(0, 4);
+  const recentTransactions = transactions.slice(-4).reverse();
 
   return (
     <section className='flex flex-wrap'>
