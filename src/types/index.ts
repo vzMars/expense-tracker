@@ -53,3 +53,23 @@ export type TransactionReducerAction =
   | { type: 'CREATE'; payload: TransactionType }
   | { type: 'UPDATE'; payload: TransactionType }
   | { type: 'DELETE'; payload: number };
+
+// CategoryContext
+export type CategoryType = {
+  id: number;
+  name: string;
+  type: string;
+};
+
+export type CategoryStateType = {
+  categories: CategoryType[];
+  isLoading: boolean;
+};
+
+export type CategoryContextType = {
+  categories: CategoryType[];
+  isLoading: boolean;
+  dispatch: React.Dispatch<CategoryReducerAction>;
+};
+
+export type CategoryReducerAction = { type: 'SET'; payload: CategoryType[] };
