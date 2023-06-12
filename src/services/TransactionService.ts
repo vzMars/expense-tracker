@@ -34,3 +34,13 @@ export const addTransaction = async (body: TransactionBodyType) => {
     body: JSON.stringify(body),
   });
 };
+
+export const deleteTransaction = async (id: number) => {
+  return fetch(`${API_URL}/transaction/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+  });
+};
