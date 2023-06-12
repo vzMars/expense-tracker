@@ -15,3 +15,22 @@ export const getTransactions = async (): Promise<TransactionType[]> => {
     return [];
   }
 };
+
+type TransactionBodyType = {
+  title: string;
+  amount: number;
+  transactionDate: string;
+  description: string;
+  categoryId: number;
+};
+
+export const addTransaction = async (body: TransactionBodyType) => {
+  return fetch(`${API_URL}/transaction`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+    body: JSON.stringify(body),
+  });
+};
