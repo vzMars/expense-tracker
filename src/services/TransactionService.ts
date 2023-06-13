@@ -44,3 +44,17 @@ export const deleteTransaction = async (id: number) => {
     credentials: 'include',
   });
 };
+
+export const editTransaction = async (
+  id: number,
+  body: TransactionBodyType
+) => {
+  return fetch(`${API_URL}/transaction/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+    body: JSON.stringify(body),
+  });
+};

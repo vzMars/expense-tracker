@@ -8,6 +8,7 @@ import RequireGuest from './components/RequireGuest';
 import Dashboard from './pages/Dashboard';
 import Transactions from './pages/Transactions';
 import AddTransaction from './pages/AddTransaction';
+import EditTransaction from './pages/EditTransaction';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import NotFound from './pages/NotFound';
@@ -29,6 +30,7 @@ function App() {
             <Route index element={<Dashboard />} />
             <Route path='transactions' element={<Transactions />} />
             <Route path='add' element={<AddTransaction />} />
+            <Route path='edit/:id' element={<EditTransaction />} />
           </Route>
 
           <Route path='404' element={<NotFound />} />
