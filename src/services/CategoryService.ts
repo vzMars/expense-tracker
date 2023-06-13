@@ -1,5 +1,5 @@
 import { CategoryType } from '../types';
-const API_URL = 'http://localhost:8080/api';
+const API_URL = 'https://api.expensetracker.vzmars.com/api';
 
 export const getCategories = async (): Promise<CategoryType[]> => {
   try {
