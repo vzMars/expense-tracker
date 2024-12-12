@@ -2,8 +2,6 @@
 
 The front-end for a full-stack expense tracker application that allows users to keep track of all their transactions.
 
-**Link to project:** https://expensetracker.vzmars.com
-
 **Back-End:** https://github.com/vzMars/expense-tracker-api
 
 ![alt text](https://i.imgur.com/K9NthkR.png)
